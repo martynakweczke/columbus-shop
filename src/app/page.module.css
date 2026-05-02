@@ -1,5 +1,8 @@
 @import "../styles/variables.css";
 
 .root {
-  background-color: var(--color-background);
+  background-color: var(--color-bg-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

@@ -1,11 +1,13 @@
+import styles from "./Header.module.css"
+
 type HeaderProps = {
     title: string;
 };
 
 export const Header = ({ title }: HeaderProps) => {
     return (
-        <div>
-            <h1>{title}</h1>
+        <div className={styles.header}>
+            <h1 className={styles.title}>{title}</h1>
         </div>
     );
 };
