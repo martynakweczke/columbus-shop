@@ -1,11 +1,22 @@
+import { Header } from "@/components/header/Header";
 import styles from "./page.module.css";
+import { ProductList } from "@/components/productList/ProductList";
+import { Footer } from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-      <main className={styles.main}>
-        <div className={styles.intro}>
-          <h1>Columbus Shop</h1>
-        </div>
+    <div className={styles.root}>
+      <header>
+        <Header title="Columbus Shop" />
+      </header>
+
+      <main>
+        <ProductList />
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
