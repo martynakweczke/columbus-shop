@@ -10,7 +10,7 @@ export default function Home() {
         <Header title="Columbus Shop" />
       </header>
 
-      <main>
+      <main className={styles.main}>
         <ProductList />
       </main>
 
