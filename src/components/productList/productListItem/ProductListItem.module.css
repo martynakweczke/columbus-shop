@@ -2,15 +2,22 @@
 
 .productCard {
   display: flex;
+  flex-direction: column;
   gap: var(--spacing-lg);
   padding: var(--spacing-sm);
   margin: var(--spacing-lg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
+
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .image {
   flex-shrink: 0;
+  align-self: center;
 }
 
 .image img {
