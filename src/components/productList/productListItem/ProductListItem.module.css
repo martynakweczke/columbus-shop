@@ -45,9 +45,13 @@
   /* justify-content: center; */
 }
 
-.price {
+.currentPrice {
   font-size: 1.1rem;
   font-weight: 800;
+}
+
+.oldPrice {
+  text-decoration: line-through;
 }
 
 .promotion {
