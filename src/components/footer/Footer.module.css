@@ -2,7 +2,7 @@
 
 .footer {
     text-align: center;
-    color: var(--color-footer);
+    color: var(--color-brand);
     padding: var(--spacing-md);
     font-size: 0.8rem;
     border-top: 1px solid var(--color-border);
