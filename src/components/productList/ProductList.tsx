@@ -9,7 +9,7 @@ type ProductListProps = {
 export const ProductList = ({products}: ProductListProps) => {
     return (
         <div>
-            <h2>Our Products</h2>
+            <h2 className={styles.productListTitle}>Our Products</h2>
             {products.map(product => (
                 <ProductListItem key={product.articleNumber}
                   product={product}

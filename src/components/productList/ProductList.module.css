@@ -1,3 +1,7 @@
 @import "../../styles/variables.css";
 
-
+.productListTitle {
+  text-align: center;
+  padding: var(--spacing-md);
+  font-weight: 800;
+}
