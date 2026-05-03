@@ -5,3 +5,9 @@
   padding: var(--spacing-md);
   font-weight: 800;
 }
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+}

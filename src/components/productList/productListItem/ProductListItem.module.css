@@ -25,6 +25,8 @@
 .infoTop {
   display: flex;
   justify-content: space-between;
+  gap: var(--spacing-xs);
+  align-items: center;
 }
 
 .title {
@@ -40,9 +42,10 @@
 
 .priceContainer {
   display: flex;
-  align-items: center;
-  gap: var(--spacing-lg);
-  /* justify-content: center; */
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-md);
 }
 
 .currentPrice {
@@ -54,6 +57,12 @@
   text-decoration: line-through;
 }
 
+.promotionContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
 .promotion {
   background-color: var(--color-promotion);
   color: var(--color-brand);
@@ -62,4 +71,5 @@
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
 }

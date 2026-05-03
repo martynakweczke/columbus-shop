@@ -28,7 +28,7 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
             <Image
               src={product.brandLogo}
               alt={product.brandName}
-              width={60}
+              width={75}
               height={30}
             />
           </div>
@@ -41,15 +41,17 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
               <span className={styles.oldPrice}>
                 {formatProductPrice(product.price)}
               </span>
-              <span className={styles.currentPrice}>
-                {formatDiscountedProductPrice(
-                  product.price,
-                  product.promotion.percentage,
-                )}
-              </span>
-              <span className={styles.promotion}>
-                Save {product.promotion.percentage}%
-              </span>
+              <div className={styles.promotionContainer}>
+                <span className={styles.currentPrice}>
+                  {formatDiscountedProductPrice(
+                    product.price,
+                    product.promotion.percentage,
+                  )}
+                </span>
+                <span className={styles.promotion}>
+                  Save {product.promotion.percentage}%
+                </span>
+              </div>
             </>
           ) : (
             <span className={styles.currentPrice}>
