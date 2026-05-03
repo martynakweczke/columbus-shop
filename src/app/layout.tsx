@@ -14,7 +14,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Columbus Shop",
+  title: "Columbus Graduate Program Recruitment Task",
   description: "Columbus Shop - By Martyna Kweczke",
 };
 

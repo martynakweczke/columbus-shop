@@ -31,7 +31,7 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
   };
 
   return (
-    <div className={styles.productCard}>
+    <article className={styles.productCard}>
       <div className={styles.image}>
         <Image
           src={product.image.url}
@@ -86,6 +86,6 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
           {isAddingToCart ? "Adding..." : "Add to Cart"}
         </button>
       </div>
-    </div>
+    </article>
   );
 };

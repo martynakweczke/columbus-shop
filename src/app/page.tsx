@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <div className={styles.root}>
       <header>
-        <Header title="Columbus Shop" />
+        <Header />
       </header>
 
       <main className={styles.main}>

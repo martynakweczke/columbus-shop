@@ -8,13 +8,13 @@ type ProductListProps = {
 
 export const ProductList = ({ products }: ProductListProps) => {
   return (
-    <>
-      <h2 className={styles.productListTitle}>Our Products</h2>
+    <section>
+      <h2 className={styles.productListTitle}>Columbus Products</h2>
       <div className={styles.mainContainer}>
         {products.map((product) => (
           <ProductListItem key={product.articleNumber} product={product} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
