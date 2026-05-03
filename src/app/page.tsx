@@ -2,8 +2,11 @@ import { Header } from "@/components/header/Header";
 import styles from "./page.module.css";
 import { ProductList } from "@/components/productList/ProductList";
 import { Footer } from "@/components/footer/Footer";
+import { apiClient } from "@/api/apiClient";
 
-export default function Home() {
+export default async function Home() {
+  const exerciseData = await apiClient.getExerciseData();
+
   return (
     <div className={styles.root}>
       <header>
@@ -11,7 +14,7 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <ProductList />
+        <ProductList products={exerciseData.products} />
       </main>
 
       <footer>
