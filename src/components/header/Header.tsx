@@ -3,6 +3,7 @@
 import { useCartContext } from "@/context/CartContext";
 import styles from "./Header.module.css";
 import Image from "next/image";
+import LogoImage from "../../../public/logo.png";
 import { CartIcon } from "../icons/CartIcon";
 
 export const Header = () => {
@@ -13,7 +14,8 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Image
-        src="https://dummyimage.com/160x60/161616/99f500&text=Recruitment"
+        loading="eager"
+        src={LogoImage}
         alt="Recruitment Task"
         width={160}
         height={60}
