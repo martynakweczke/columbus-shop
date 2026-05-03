@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { CartContextProvider } from "@/context/CartContext";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -24,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.variable} ${robotoMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <CartContextProvider>{children}</CartContextProvider>
+      </body>
     </html>
   );
 }

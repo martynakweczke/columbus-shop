@@ -8,7 +8,7 @@ import {
   formatProductPrice,
 } from "./ProductListItem.utils";
 import { useState } from "react";
-import { apiClient } from "@/api/apiClient";
+import { useCartContext } from "@/context/CartContext";
 
 type ProductListItemProps = {
   product: Product;
@@ -16,13 +16,18 @@ type ProductListItemProps = {
 
 export const ProductListItem = ({ product }: ProductListItemProps) => {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const { addProductToCart } = useCartContext();
 
   const handleAddToCartClick = async () => {
-    setIsAddingToCart(true);
+    try {
+      setIsAddingToCart(true);
 
-    await apiClient.addProductToCart(product.articleNumber);
-
-    setIsAddingToCart(false);
+      await addProductToCart(product);
+    } catch {
+      console.error("Adding to cart failed");
+    } finally {
+      setIsAddingToCart(false);
+    }
   };
 
   return (
