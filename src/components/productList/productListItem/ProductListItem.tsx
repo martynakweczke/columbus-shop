@@ -52,7 +52,7 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
             />
           </div>
         </div>
-        <span className={styles.description}>{product.description}</span>
+        <p className={styles.description}>{product.description}</p>
 
         <div className={styles.priceContainer}>
           {product.promotion ? (
