@@ -3,10 +3,10 @@
   --color-brand-hover: #4338ca;
   --color-footer: #4038ca;
   --color-text-main: #111827;
+  --color-text-helper: #8e8a86;
   --color-bg-main: #f9fafb;
+  --color-bg-secondary: #e6f7ff;
   --color-border: #e5e7eb;
-  --color-description: #6e6965;
-  --color-promotion: #e6f7ff;
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -23,9 +23,8 @@
     --color-brand-hover: #818cf8;
     --color-footer: #5c54ea;
     --color-text-main: #f9fafb;
+    --color-text-helper: #827d7a;
     --color-bg-main: #0a0a0a;
     --color-border: #262626;
-    --color-description: #6e6965;
-    --color-promotion: #e6f7ff;
   }
 }

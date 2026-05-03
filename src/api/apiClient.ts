@@ -19,10 +19,10 @@ export const apiClient = {
     return response.json();
   },
 
-  async addProductToCart(productId: string): Promise<boolean> {
+  async addProductToCart(articleNumber: string): Promise<boolean> {
     return new Promise((resolve) => {
       setTimeout(() => {
-        console.info(`Product ${productId} added to cart`);
+        console.info(`Product ${articleNumber} added to cart`);
 
         resolve(true);
       }, 600);

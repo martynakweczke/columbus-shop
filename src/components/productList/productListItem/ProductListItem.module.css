@@ -36,7 +36,7 @@
 
 .description {
   font-size: 0.95rem;
-  color: var(--color-description);
+  color: var(--color-text-helper);
   line-height: 1.5;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .promotion {
-  background-color: var(--color-promotion);
+  background-color: var(--color-bg-secondary);
   color: var(--color-brand);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--spacing-xs);
@@ -72,4 +72,20 @@
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+}
+
+.addToCartButton {
+  background-color: var(--color-brand);
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: var(--spacing-md);
+
+  &:hover {
+    background-color: var(--color-brand-hover);
+  }
 }

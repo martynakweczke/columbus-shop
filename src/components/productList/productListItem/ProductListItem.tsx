@@ -1,3 +1,5 @@
+"use client";
+
 import { Product } from "@/types/product";
 import Image from "next/image";
 import styles from "./ProductListItem.module.css";
@@ -5,12 +7,24 @@ import {
   formatDiscountedProductPrice,
   formatProductPrice,
 } from "./ProductListItem.utils";
+import { useState } from "react";
+import { apiClient } from "@/api/apiClient";
 
 type ProductListItemProps = {
   product: Product;
 };
 
 export const ProductListItem = ({ product }: ProductListItemProps) => {
+  const [isAddingToCart, setIsAddingToCart] = useState(false);
+
+  const handleAddToCartClick = async () => {
+    setIsAddingToCart(true);
+
+    await apiClient.addProductToCart(product.articleNumber);
+
+    setIsAddingToCart(false);
+  };
+
   return (
     <div className={styles.productCard}>
       <div className={styles.image}>
@@ -59,6 +73,13 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
             </span>
           )}
         </div>
+        <button
+          className={styles.addToCartButton}
+          onClick={handleAddToCartClick}
+          disabled={isAddingToCart}
+        >
+          {isAddingToCart ? "Adding..." : "Add to Cart"}
+        </button>
       </div>
     </div>
   );
