@@ -22,6 +22,11 @@
   flex: 1;
 }
 
+.infoTop {
+  display: flex;
+  justify-content: space-between;
+}
+
 .title {
   font-size: 1.2rem;
   font-weight: 800;
