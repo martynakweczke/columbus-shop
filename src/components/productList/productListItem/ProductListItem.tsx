@@ -16,8 +16,12 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
       />
       <span>{product.title}</span>
       <span>{product.description}</span>
-      <span>{product.brandLogo}</span>
-      <span>{product.brandName}</span>
+      <Image
+        src={product.brandLogo}
+        alt={product.brandName}
+        width={50}
+        height={30}
+      />
       <span>{product.price}</span>
       {product.promotion && <span>{product.promotion.percentage}</span>}
     </div>
