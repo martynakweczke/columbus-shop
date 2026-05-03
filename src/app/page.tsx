@@ -9,17 +9,13 @@ export default async function Home() {
 
   return (
     <div className={styles.root}>
-      <header>
-        <Header />
-      </header>
+      <Header />
 
       <main className={styles.main}>
         <ProductList products={columbusRecruitmentData.products} />
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -75,6 +75,7 @@
 }
 
 .addToCartButton {
+  color: var(--color-white);
   background-color: var(--color-brand);
   border-radius: var(--radius-sm);
   border: none;
