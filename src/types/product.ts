@@ -5,7 +5,7 @@ export interface ColumbusRecruitmentData {
 }
 
 export interface Image {
-  link: string;
+  url: string;
   altText: string;
 }
 

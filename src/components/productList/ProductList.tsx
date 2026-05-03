@@ -1,5 +1,6 @@
 import { Product } from "@/types/product";
 import styles from "./ProductList.module.css"
+import { ProductListItem } from "./productListItem/ProductListItem";
 
 type ProductListProps = {
     products: Product[];
@@ -8,9 +9,11 @@ type ProductListProps = {
 export const ProductList = ({products}: ProductListProps) => {
     return (
         <div>
-            <h2>Product list</h2>
+            <h2>Our Products</h2>
             {products.map(product => (
-                <span key={product.articleNumber}>{product.title}</span>
+                <ProductListItem key={product.articleNumber}
+                  product={product}
+                />
             ))}
         </div>
     );

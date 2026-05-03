@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer/Footer";
 import { apiClient } from "@/api/apiClient";
 
 export default async function Home() {
-  const exerciseData = await apiClient.getExerciseData();
+  const columbusRecruitmentData = await apiClient.getColumbusRecruitmentData();
 
   return (
     <div className={styles.root}>
@@ -14,7 +14,7 @@ export default async function Home() {
       </header>
 
       <main className={styles.main}>
-        <ProductList products={exerciseData.products} />
+        <ProductList products={columbusRecruitmentData.products} />
       </main>
 
       <footer>
